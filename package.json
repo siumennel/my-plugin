@@ -1,0 +1,52 @@
+{
+  "name": "my-plugin",
+  "version": "0.0.1",
+  "description": "my plugin",
+  "main": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rimraf ./dist",
+    "watch": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "jianshe yang",
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/cli": "^2.1.2",
+    "@capacitor/core": "^2.1.2"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.0",
+    "typescript": "^3.2.4",
+    "@capacitor/ios": "latest",
+    "@capacitor/android": "latest"
+  },
+  "files": [
+    "dist/",
+    "ios/",
+    "android/",
+    "MyPlugin.podspec"
+  ],
+  "keywords": [
+    "capacitor",
+    "plugin",
+    "native"
+  ],
+  "capacitor": {
+    "ios": {
+      "src": "ios"
+    },
+    "android": {
+      "src": "android"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "www.github.com"
+  },
+  "bugs": {
+    "url": "https://www.github.com/issues"
+  },
+  "private": true
+}
